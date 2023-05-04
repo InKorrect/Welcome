@@ -21,4 +21,11 @@ class WelcomeTest {
 		assertEquals(Welcome.welcome(""),verif);
 		assertEquals(Welcome.welcome(null),verif);
 	}
+	
+	@Test
+	void test3() {
+		assertEquals(Welcome.welcome("JERRY"),"HELLO, JERRY");
+		assertEquals(Welcome.welcome("BOB"),"HELLO, BOB");
+		assertEquals(Welcome.welcome("PAUL"),"HELLO, PAUL");
+	}
 }
