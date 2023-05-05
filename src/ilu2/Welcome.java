@@ -24,6 +24,24 @@ public class Welcome {
 		}
 		return str.toString();
 	}
+	private static int nbOccurences(String[] noms,int nbOccur,String nom) {
+		for(int i=0;i<noms.length;i++) {
+			if(noms[i].equals(nom)) {
+				nbOccur++;
+			}
+		}
+		return nbOccur;
+	}
+	
+	private static boolean exist(String[] nomMin,String nom) {
+		boolean exist=false;
+		for(int i=0;i<nomMin.length;i++) {
+			if(nomMin[i].equals(nom)) {
+				exist=true;
+			}
+		}
+		return exist;
+	}
 	
 	private static String nomS(String input,String[] part) {
 		int[] nomMaj=new int[part.length]; int o=0; int nbNomMaj=0;
@@ -42,6 +60,7 @@ public class Welcome {
 		if(nbNomMaj>0)str4.append(nomMaj(nomMaj,part,nbNomMaj));
 		return str4.toString();
 	}
+	
 	private static String nomMin(int[] nomMin,String part[],int nbNomMin) {
 		int i;
 		StringBuilder str = new StringBuilder("Hello");
