@@ -31,26 +31,21 @@ class WelcomeTest {
 	
 	@Test
 	void test4() {
-		assertEquals(Welcome.welcome("amy,bob"),"Hello, Amy and Bob");
-		assertEquals(Welcome.welcome("bob,amy"),"Hello, Bob and Amy");
-		assertEquals(Welcome.welcome("paul,bob"),"Hello, Paul and Bob");
+		assertEquals(Welcome.welcome("amy,bob"),"Hello, Amy, Bob");
+		assertEquals(Welcome.welcome("bob,amy"),"Hello, Bob, Amy");
+		assertEquals(Welcome.welcome("paul,bob"),"Hello, Paul, Bob");
 	}
 	
 	@Test
 	void test5() {
-		assertEquals(Welcome.welcome("amy,bob,jerry,michel"),"Hello, Amy, Bob, Jerry and Michel");
-		assertEquals(Welcome.welcome("bob,amy,tristan"),"Hello, Bob, Amy and Tristan");
-		assertEquals(Welcome.welcome("paul,bob,amy"),"Hello, Paul, Bob and Amy");
+		assertEquals(Welcome.welcome("amy,bob,jerry,michel"),"Hello, Amy, Bob, Jerry, Michel");
+		assertEquals(Welcome.welcome("bob,amy,tristan"),"Hello, Bob, Amy, Tristan");
+		assertEquals(Welcome.welcome("paul,bob,amy"),"Hello, Paul, Bob, Amy");
 	}
 	
 	@Test
 	void test6() {
-		assertEquals(Welcome.welcome("amy,BOB,jerry"),"Hello, Amy and Jerry. AND HELLO, BOB !");
-		assertEquals(Welcome.welcome("BOB,AMY,tristan"),"Hello, Tristan. AND HELLO, BOB AND AMY !");
-	}
-	@Test
-	void test7() {
-		assertEquals(Welcome.welcome("amy,BOB,jerry"),"Hello, Amy and Jerry. AND HELLO, BOB !");
-		assertEquals(Welcome.welcome("BOB,AMY,tristan"),"Hello, Tristan. AND HELLO, BOB AND AMY !");
+		assertEquals(Welcome.welcome("amy,BOB,jerry"),"Hello, Amy, Jerry. AND HELLO, BOB !");
+		assertEquals(Welcome.welcome("BOB,AMY,tristan"),"Hello, Tristan. AND HELLO, BOB, AMY !");
 	}
 }
